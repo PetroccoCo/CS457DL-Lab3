@@ -1,0 +1,20 @@
+Possible work breakdown as follows, for project 3:
+Setup:
+1. method to read the input from the user.
+2. method to display usage of the resolver.
+3. a resource record structure (RR.)
+4. define different RR to use in the project (SIG, AAAA, and so on.)
+
+Main Loop:
+5. method to build a Query (query packet.)
+6. method to execute the query (and get the response back.)
+7. method to decode the response.
+8. method to perform error handling, displaying appropriate messages depending on error.
+
+Output and shutdown:
+9. method to output the results.
+10. a file or array with the list of servers available to query (DNS root servers.)
+
+Error Checking Requirements (part 8):
+  At each stage check the replies for the 3 error conditions Russ noted: 1) the hostname may not exist or 2) the hostname may exists, but no AAAA records are
+  associated with the name, or 3) the AAAA records exists, but are not signed.
