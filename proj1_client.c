@@ -1,30 +1,28 @@
-
 /*
-CS457DL Project 1
+CS457DL Project 3
 Tapestry Group Submission
-14Feb2012
+4/26/2012
 */
 
 
-/* This is the client program portion of the CS457DL Lab/Programming Assignnment 1 */
+/* This is the client program portion of the CS457DL Lab/Programming Assignnment 3 */
 
+#include <arpa/inet.h>
 #include <ctype.h>
+#include <errno.h>
+#include <limits.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <string.h>
-#include <limits.h>
-#include <errno.h>
 #include <string.h>
-#include <sys/types.h>
 #include <sys/socket.h>
-#include <netinet/in.h>
-#include <netdb.h>
-#include <arpa/inet.h>
+#include <sys/types.h>
 #include <sys/wait.h>
-#include <signal.h>
 #include <time.h>
-#include <netdb.h>
+#include <unistd.h>
 
 uint32_t inputNumber;           /* -x number */
 char connectionType[4];         /* -t [udp | tcp] */

@@ -1,20 +1,42 @@
-Possible work breakdown as follows, for project 3:
-Setup:
+* Michael Winterscheidt
 1. method to read the input from the user.
 2. method to display usage of the resolver.
 3. a resource record structure (RR.)
 4. define different RR to use in the project (SIG, AAAA, and so on.)
 
+
+* Francisco Mendez
 Main Loop:
 5. method to build a Query (query packet.)
 6. method to execute the query (and get the response back.)
 7. method to decode the response.
 8. method to perform error handling, displaying appropriate messages depending on error.
 
+
+* Michael Winterscheidt
 Output and shutdown:
 9. method to output the results.
 10. a file or array with the list of servers available to query (DNS root servers.)
+11. Makefile
+
+
+* Francisco Mendez
+12. Readme file
+
+
+* Michael Winterscheidt, Francisco Mendez
+13. Test
 
 Error Checking Requirements (part 8):
   At each stage check the replies for the 3 error conditions Russ noted: 1) the hostname may not exist or 2) the hostname may exists, but no AAAA records are
   associated with the name, or 3) the AAAA records exists, but are not signed.
+
+Grading:
+1. The program name should be "myresolver". if your program does not compile on the department linux machines using your makefile, or the file names are not correct. -50%
+2. The print out message is incomplete or inaccurate. -20%
+3. The user interface is incomplete. -10%
+4. Test cases:
+(1) www.iis.se: you should print out both the AAAA record and RRSIG record. 25%, if you print out any A record, -10%;
+(2) www.nist.gov: you should print out both the AAAA and RRSIG record. 15%
+(3) www.colostate.edu: you must look up and print out the CNAME if failure, 15%
+(4) www.comcast6.net: you must look up and print out the CNAME if failure, 15%
